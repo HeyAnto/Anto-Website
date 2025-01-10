@@ -1,0 +1,297 @@
+:root {
+  --bg-dark-color: #000;
+  --text-dark-color: #fafafa;
+  --text-dark-subtext-color: #808080;
+  --text-green-subtext-color: #63ff4f;
+  --text-highlight: #cb9aff;
+  --seperator: #291f33;
+  --btn-hover: #a653ff;
+}
+
+::selection {
+  color: var(--text-highlight);
+  background: var(--seperator);
+}
+
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url(src/font/BDOGrotesk-VF.ttf) format("truetype");
+}
+
+.p-min {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+b {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-btn {
+  color: var(--text-highlight);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BDO Grotesk", sans-serif;
+}
+
+body {
+  background: var(--bg-dark-color);
+  color: var(--text-dark-color);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  gap: 50px;
+}
+
+separator {
+  width: 100%;
+  height: 1px;
+  background: var(--text-dark-subtext-color);
+}
+
+header,
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav,
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-info,
+.nav-info {
+  display: flex;
+  align-items: center;
+}
+
+.top-info {
+  gap: 5px;
+}
+
+.nav-info {
+  gap: 10px;
+}
+
+.ping-ava {
+  width: 5px;
+  height: 5px;
+  background: var(--text-green-subtext-color);
+  animation: ping 1.5s infinite ease-in-out;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ping {
+  width: 5px;
+  height: 5px;
+}
+
+.logo {
+  fill: var(--text-dark-color);
+  transition: all 1.5s;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+  transition: all 1.5s;
+}
+
+.content-name {
+  padding: 0px 10px;
+  color: var(--text-highlight);
+  background: #291f33;
+  position: relative;
+}
+
+.content-name:hover {
+  background: none;
+  cursor: se-resize;
+}
+
+.hover-image {
+  width: 100px;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    visibility 0s linear 0.3s;
+  transform: scale(0.95);
+  box-shadow: var(--bg-dark-color) 0px 10px 30px 0px;
+}
+
+.hover-image.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    visibility 0s linear 0s;
+}
+
+.content-bold {
+  padding: 0px 5px;
+  color: var(--text-highlight);
+  background: #291f33;
+  font-weight: 500;
+  position: relative;
+}
+
+.sub-content {
+  color: var(--text-dark-subtext-color);
+}
+
+.content-social {
+  display: flex;
+  gap: 10px;
+}
+
+.content-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 50px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 275px;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s;
+}
+
+.button,
+.button-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: var(--bg-dark-color);
+  background: var(--text-highlight);
+  border: none;
+  transition: all 0.2s;
+
+  position: relative;
+}
+
+.button-mobile {
+  display: none;
+}
+
+.button:hover,
+.button-mobile:hover {
+  background-color: var(--btn-hover);
+  color: var(--text-dark-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.btn-social:hover {
+  cursor: pointer;
+}
+
+.btn-social:hover .icon-social {
+  filter: brightness(100);
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 100%;
+  }
+  .button {
+    display: none;
+  }
+  .button-mobile {
+    display: flex;
+  }
+  #oneko {
+    display: none;
+  }
+}
