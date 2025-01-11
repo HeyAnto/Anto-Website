@@ -9,7 +9,7 @@
     <meta name="keywords"
         content="Portfolio, Développeur, Webdesigner, Web, Créativité, Antonin, Sioly, Clermont-Ferrand, Auvergne, Puy-de-Dôme">
     <meta name="author" content="Antonin Sioly">
-    <meta name="robots" content="index, secret">
+    <meta name="robots" content="index">
 
     <link rel="icon" type="image/svg+xml" href="src/favico.svg">
     <title>Anto Website</title>
@@ -31,32 +31,25 @@
                 </div>
                 <!-- Navigation -->
                 <nav>
-                    <div>
-                        <!-- Logo SVG -->
-                        <svg class="logo" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_527_5)">
-                                <path
-                                    d="M14.6014 6.29377C17.9215 -1.39503 3.62333 -1.45663 7.03963 6.25947C0.144821 1.04307 -3.6657 13.7299 5.07217 13.2791C2.17522 14.3053 1.21535 18.0391 3.27251 20.2497C5.86711 22.7571 10.8776 21.1597 10.8625 17.3524C10.9196 21.159 15.8896 22.8026 18.4864 20.3183C20.5428 18.1329 19.5352 14.3816 16.6368 13.3309C19.1193 13.5073 21.8571 12.1535 21.7002 9.30797C21.9012 5.55317 17.1468 3.78427 14.6014 6.29377ZM10.8726 14.2038C9.39408 14.1975 8.19046 12.9928 8.18395 11.5137C8.17744 10.0346 9.37021 8.84037 10.8487 8.84667C12.3272 8.85297 13.5301 10.0584 13.5366 11.5375C13.5431 13.0166 12.3503 14.2108 10.8726 14.2038Z" />
-                            </g>
-                        </svg>
-                    </div>
                     <div class="nav-info">
                         <p>FRANCE</p>
                         <div class="ping" style="background: var(--text-dark-color);"></div>
                         <p id="heure"></p>
                     </div>
+                    <img class="logo" src="src/logo.svg" alt="Logo Antonin Sioly">
                 </nav>
             </header>
             <div class="content">
                 <!-- Hero Title -->
-                <div>
+                <div class="animated">
                     <h1>Salut, moi c'est <span class="content-name">Antonin</span><br>
                         Je design, je code et parfois je fais des trucs cool <span><img src="src/img/emoji-sparks.png"
                                 alt="Émoji Étincelles"></span></h1>
-                    <img src="src/img/moi.jpg" alt="C'est moi" class="hover-image" id="moi">
                 </div>
+                <img src="src/img/moi.jpg" alt="C'est moi" class="hover-image" id="moi">
 
-                <p>Je suis un <span class="content-bold">(web)designer</span>. En général, j’adore concevoir des
+                <p class="animated">Je suis un <span class="content-bold">(web)designer</span>. En général, j’adore
+                    concevoir des
                     maquettes web, mais je me suis dit qu’il serait encore plus incroyable de les réaliser pour de vrai.
                     Alors, j’ai décidé de me lancer dans une formation de <span class="content-bold">Développeur Web et
                         Web Mobile</span>.
@@ -88,7 +81,7 @@
             </div>
 
             <!-- Réseaux Sociaux -->
-            <div class="content-row">
+            <div class="content-row animated">
                 <a class="button" href="src/CV.pdf" target="_blank">Télécharger CV</a>
                 <a class="button-mobile" href="src/CV.pdf" target="_blank">CV</a>
                 <div class="content-social">
@@ -103,15 +96,15 @@
                 </div>
             </div>
 
-            <hr>
+            <hr class="animated">
             </hr>
 
             <!-- Projets -->
-            <div class="content-row">
+            <div class="content-row hidden">
                 <h2>Projets</h2>
                 <img src="src/img/emoji-folder.png" alt="Émoji Folder">
             </div>
-            <div class="content-card">
+            <div class="content-card hidden">
                 <a class="card" href="#" target="_blank">
                     <img class="projet-img" src="src/img/projets/projet-zerda.png" alt="Zerda">
                     <p>Zerda</p>
@@ -129,17 +122,17 @@
                     <p>Memory Game</p>
                 </a>
             </div>
-            <div id="repos"></div>
+            <div id="repos" class="hidden"></div>
 
-            <hr>
+            <hr class="hidden">
             </hr>
 
             <!-- Ressources -->
-            <div class="content-row">
+            <div class="content-row hidden">
                 <h2>Ressources</h2>
                 <img src="src/img/emoji-paperclip.png" alt="Émoji Folder">
             </div>
-            <div class="content-card">
+            <div class="content-card hidden">
                 <a class="card" href="https://www.figma.com/community/file/1449820590725072066" target="_blank">
                     <img class="projet-img" src="src/img/projets/ressource-minimalcv.png" alt="Minimal CV">
                     <p>Figma Template - Minimal CV</p>
@@ -176,8 +169,7 @@
     </main>
 
     <!-- Script -->
-    <script src="src/js/heure.js"></script>
-    <script src="src/js/moi.js"></script>
+    <script src="src/js/script.js"></script>
     <script src="src/js/github.js"></script>
 </body>
 

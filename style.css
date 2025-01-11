@@ -42,6 +42,10 @@ h2 {
   line-height: 34px;
 }
 
+#oneko {
+  z-index: 5000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -162,7 +166,6 @@ nav,
   padding: 0px 10px;
   color: var(--text-highlight);
   background: #291f33;
-  position: relative;
 }
 
 .content-name:hover {
@@ -182,7 +185,7 @@ nav,
   box-shadow: var(--bg-dark-color) 0px 10px 30px 0px;
 }
 
-.hover-image.visible {
+.hover-image.hover-visible {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -216,7 +219,6 @@ a {
   color: var(--text-highlight);
   background: #291f33;
   font-weight: 500;
-  position: relative;
 }
 
 .sub-content {
@@ -233,7 +235,6 @@ a {
 }
 
 .card {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -263,8 +264,6 @@ a {
   background: var(--text-highlight);
   border: none;
   transition: all 0.2s;
-
-  position: relative;
 }
 
 .button-mobile {
@@ -294,6 +293,52 @@ a {
 
 .btn-social:hover .icon-social {
   filter: brightness(100);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animated:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animated:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.animated:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.animated:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Animation Scrolle */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 /* Media */
